@@ -9,23 +9,31 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'super 6 - Data';
   fname = 'Parth';
-  lname = 'B';
+  lname = 'bhatti';
   age = 22;
-  address = 'Ahmedabad';
+  address = 'ahmedabad';
   contact = 5252552;
 
-showDetails(){
+showDetails() {
  this.showFname();
  this.showLname();
  this.showAge();
  this.showAddress();
  this.showContact();
 }
+
+showDetails2(){
+  return {name: this.fname, lastName: this.lname, age: this.age, address: this.address, contact: this.contact};
+}
+
 showFname(){
-  console.log(this.fname);
+  console.log("ABC");
+  return this.fname;
+
 };
 showLname(){
   console.log(this.lname);
+  return this.lname;
 };
 showAge(){
   console.log(this.age);
@@ -36,6 +44,7 @@ showAddress(){
 showContact(){
   console.log(this.contact);
 };
+
 
 
 }
