@@ -27,7 +27,6 @@ showDetails2(){
 }
 
 showFname(){
-  console.log("ABC");
   return this.fname;
 
 };
