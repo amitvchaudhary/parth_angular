@@ -1,0 +1,12 @@
+<p>click button and create car!</p>
+
+<button (click)="generateCar()">Generate Car from HERE !</button>
+
+<ul *ngFor="let c of carList">
+<li>{{c.name}}, </li>
+<li>{{c.company}}, </li>
+<li>{{c.type}}, </li>
+<li>{{c.seater}}, </li>
+<li>{{c.color}}, </li>
+</ul>
+

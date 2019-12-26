@@ -10,7 +10,7 @@ import { Component, OnInit } from '@angular/core';
 export class HouseComponent implements OnInit {
 
   house: House;
-  
+
   houseList: Houses[] = [];
 
   constructor() { }
@@ -36,14 +36,8 @@ export class House {
 
   name: string;
   color: string;
-  room :number;
+  room: number;
   Address :string;
-  shape : string;
-  floor: number;
-  door : number;
-  window : number;
-  entrygateshape : string;
-  table : string;
 }
 
 export class Houses {
