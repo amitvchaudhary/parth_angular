@@ -1,0 +1,11 @@
+<p>house works!</p>
+
+<a (click)="createHouse()">Click Here !</a>
+
+<!-- {{houseList | json}} -->
+
+
+<div *ngFor="let h of houseList">
+<span>{{h.name}}, </span>
+<span>{{h.color}}</span>
+  </div>
