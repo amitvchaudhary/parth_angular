@@ -7,13 +7,17 @@ import { HeroComponent } from './hero/hero.component';
 import { FormsModule } from '@angular/forms';
 import { HouseComponent } from './house/house.component';
 import { CarComponent } from './car/car.component';
+import { CarListComponent } from './car-list/car-list.component';
+import { AnchorComponent } from './anchor/anchor.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeroComponent,
     HouseComponent,
-    CarComponent
+    CarComponent,
+    CarListComponent,
+    AnchorComponent
   ],
   imports: [
     BrowserModule,

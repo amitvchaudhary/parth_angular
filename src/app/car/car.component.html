@@ -1,12 +1,35 @@
 <p>click button and create car!</p>
 
-<button (click)="generateCar()">Generate Car from HERE !</button>
+<div class="add-form" style="float: left; width:200px; margin-right: 100px;">
+<input type="color" [(ngModel)]="newCar.color" placeholder="color"><br><br>
+<input type="text" [(ngModel)]="newCar.company" placeholder="company"><br><br>
+<input type="text" [(ngModel)]="newCar.name" placeholder="name"><br><br>
+<input type="text" [(ngModel)]="newCar.seater" placeholder="seater"><br><br>
+<input type="text" [(ngModel)]="newCar.type" placeholder="type"><br><br>
+<button (click)="generateCar(newCar)">Generate Car from HERE !</button><br><br>
+<button (click)="deleteCar()">Delete Car from HERE !</button><br><br>
+</div>
+<div class="arrayarea">
+<div class="car-box">
+  <h5>Car List</h5>
+<app-car-list [carList]="carList" (sendCar)="getCar()"></app-car-list>
 
-<ul *ngFor="let c of carList">
-<li>{{c.name}}, </li>
-<li>{{c.company}}, </li>
-<li>{{c.type}}, </li>
-<li>{{c.seater}}, </li>
-<li>{{c.color}}, </li>
-</ul>
+</div>
+<div class="actionarea">
+<a>></a><br>
+<a><</a><br>
+<a>>></a><br>
+<a><<</a></div>
+<div class="car-box">
+    <h5>In-Stock Car List</h5>
+    <ul [ngStyle]="{'background': s.color}" *ngFor="let s of stockedCarList; let i = index" style="float: left; width: 100%;" (click)="moveLeftArray(s)">
+        <li>{{s.name}}, </li>
+        <li>{{s.company}}, </li>
+        <li>{{s.type}}, </li>
+        <li>{{s.seater}}, </li>
+        <li>{{s.color}}, </li>
+        </ul>
+  </div>
+</div>
+
 

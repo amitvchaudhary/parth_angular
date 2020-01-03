@@ -8,15 +8,18 @@
 </head>
 <body>
   <h2 class="DD">{{title}}</h2>
-  <a (click)="showDetails()">All Detail</a>
+  <input type="text" [(ngModel)]="studentName">
+  <button (click)="changename()">change name</button>
+  {{studentName}}
+  <!-- <a (click)="showDetails()">All Detail</a>
   <a (click)="showFname()">First Name</a>
   <a (click)="showLname()">Last Name</a>
   <a (click)="showAge()">Age</a>
   <a (click)="showAddress()">Address</a>
   <a (click)="showContact()">Contact</a>
-  {{showFname()}}
+  {{showFname()}} -->
 
-<div class="piped-data">
+<!-- <div class="piped-data">
   <h3>Piped-data</h3>
   <p>{{showDetails2() | json}}</p>
   <p>{{fname | json}}</p>
@@ -24,17 +27,17 @@
   <p>{{age | percent}}</p>
   <p>{{address | titlecase}}</p>
   <p>{{contact}}</p>
-  </div>
+  </div> -->
 
 
 
-  <app-hero></app-hero>
+  <!-- <app-hero></app-hero>
   <app-house></app-house>
 <br>
-  <br>
-  <h3>Create car here.</h3>
-  <app-car></app-car>
-
+  <br> -->
+  <!-- <h3>Create car here.</h3>
+  <app-car></app-car> -->
+<An [customeClick]="customeClick" (customeHref)="GotClicked($event)"></An>
 
 </body>
 </html>

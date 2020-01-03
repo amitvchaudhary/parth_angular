@@ -1,0 +1,9 @@
+<ul [ngStyle]="{'background': c.color}" *ngFor="let c of carList; let i = index" style="float: left; width: 100%;" (click)="moveRightArray(i)">
+    <li>{{c.name}}, </li>
+    <li>{{c.company}}, </li>
+    <li>{{c.type}}, </li>
+    <li>{{c.seater}}, </li>
+    <li>{{c.color}}, </li>
+    </ul>
+
+    <button (click)="passCar()">ABC BT</button>

@@ -13,6 +13,17 @@ export class AppComponent {
   age = 22;
   address = 'ahmedabad';
   contact = 5252552;
+  studentName: string;
+
+  customeClick: string = "Your Data is available now, Click on button to get the Data.";
+
+  GotClicked(e){
+    alert(e);
+  }
+
+  changename(){
+    this.studentName = 'Neel Nitin Mukesh Ambani';
+  }
 
 showDetails() {
  this.showFname();
